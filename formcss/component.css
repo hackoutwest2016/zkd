@@ -1,3 +1,9 @@
+/*Custom changes lol*/
+.boxcover{
+padding: 0em 0.4em 0em 0.4em;
+	background-color:black !important;
+
+}
 @font-face {
 	font-family: 'nlicons';
 	src:url('../fonts/nlicons/nlicons.eot');
@@ -24,7 +30,7 @@
 }
 
 /* normalize the input elements, make them look like everything else */
-.nl-form input,
+/*.nl-form input,
 .nl-form select,
 .nl-form button {
 	border: none;
@@ -43,7 +49,7 @@
 
 .nl-form input:focus {
 	outline: none;
-}
+}*/
 
 /* custom field (drop-down, text element) styling  */
 .nl-field {
@@ -56,7 +62,7 @@
 }
 
 /* the toggle is the visible part in the form */
-.nl-field-toggle,
+/* .nl-field-toggle,
 .nl-form input,
 .nl-form select  {
 	line-height: inherit;
@@ -65,7 +71,7 @@
 	cursor: pointer;
 	border-bottom: 1px dashed #b14943;
 }
-
+*/
 /* drop-down list / text element */
 .nl-field ul {
 	position: absolute;
