@@ -274,4 +274,7 @@ jQuery(document).ready(function($){
 		var mq = window.getComputedStyle(element, '::before').getPropertyValue('content').replace(/["']/g, '');
 		return mq;
 	}
+
+
 });
+

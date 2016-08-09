@@ -14,7 +14,9 @@
 .clearfix:before, .clearfix:after { content: ''; display: table; }
 .clearfix:after { clear: both; }
 
-
+body{
+	color: #000 !important;
+}
 
 a {
 	color: rgba(0,0,0,0.3);
