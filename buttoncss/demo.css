@@ -14,33 +14,7 @@
 .clearfix:before, .clearfix:after { content: ''; display: table; }
 .clearfix:after { clear: both; }
 
-body {
-	background: #f9f9f9;
-	color: #62706c;
-	font-size: 100%;
-	line-height: 1.25;
-	padding: 25px 0;
-	border-right: 25px solid #fff;
-	border-left: 25px solid #fff;
-	font-family: 'Lato', Arial, sans-serif;
-}
 
-body::before,
-body::after {
-	content: '';
-	position: fixed;
-	left: 0;
-	top: 0;
-	width: 100%;
-	height: 25px;
-	background: #fff;
-	z-index: 99;
-}
-
-body::after {
-	top: auto;
-	bottom: 0;
-}
 
 a {
 	color: rgba(0,0,0,0.3);

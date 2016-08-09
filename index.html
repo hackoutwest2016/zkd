@@ -11,6 +11,12 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 	<script src="js/modernizr.js"></script> <!-- Modernizr -->
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="buttoncss/demo.css" />
+	<link rel="stylesheet" type="text/css" href="buttoncss/component.css" />
+	<script src="buttonjs/modernizr.custom.js"></script>
+	<link rel="stylesheet" type="text/css" href="formcss/default.css" />
+		<link rel="stylesheet" type="text/css" href="formcss/component.css" />
+		<script src="formjs/modernizr.custom.js"></script>
   	
 	<title>Presentation Slideshow | CodyHouse</title>
 </head>
@@ -25,8 +31,46 @@
 					<li>
 						<div class="cd-slider-content">
 							<div class="content-wrapper">
+								<div class="main clearfix">
+									<form id="nl-form" class="nl-form">
+										I feel to eat 
+										<select>
+											<option value="1" selected>any food</option>
+											<option value="2">Indian</option>
+											<option value="3">French</option>
+											<option value="4">Japanese</option>
+											<option value="2">Italian</option>
+										</select>
+										<br />in a
+										<select>
+											<option value="1" selected>standard</option>
+											<option value="2">fancy</option>
+											<option value="3">hip</option>
+											<option value="4">traditional</option>
+											<option value="2">romantic</option>
+										</select>
+										restaurant
+										<br />at 
+										<select>
+											<option value="1" selected>anytime</option>
+										 	<option value="1">7 p.m.</option>
+										 	<option value="2">8 p.m.</option>
+										 	<option value="3">9 p.m.</option>
+										</select>
+										in <input type="text" value="" placeholder="any city" data-subline="For example: <em>Los Angeles</em> or <em>New York</em>"/>
+										<div class="nl-submit-wrap">
+											<button class="nl-submit" type="submit">Find a restaurant</button>
+										</div>
+										<div class="nl-overlay"></div>
+									</form>
+								</div>
 								<h2>Slider #2</h2>
-								 <button type="button" class="btn btn-default">dfgdfg</button>
+								 <div class="progress-button">
+									<button><span>Submit</span></button>
+									<svg class="progress-circle" width="70" height="70"><path d="m35,2.5c17.955803,0 32.5,14.544199 32.5,32.5c0,17.955803 -14.544197,32.5 -32.5,32.5c-17.955803,0 -32.5,-14.544197 -32.5,-32.5c0,-17.955801 14.544197,-32.5 32.5,-32.5z"/></svg>
+									<svg class="checkmark" width="70" height="70"><path d="m31.5,46.5l15.3,-23.2"/><path d="m31.5,46.5l-8.5,-7.1"/></svg>
+									<svg class="cross" width="70" height="70"><path d="m35,35l-9.3,-9.3"/><path d="m35,35l9.3,9.3"/><path d="m35,35l-9.3,9.3"/><path d="m35,35l9.3,-9.3"/></svg>
+								</div>
 							</div>
 						</div>
 					</li>
@@ -64,5 +108,29 @@
 <script src="js/jquery-2.1.4.js"></script>
 <script src="js/jquery.mobile.custom.min.js"></script>
 <script src="js/main.js"></script> <!-- Resource jQuery -->
+<script src="buttonjs/classie.js"></script>
+		<script src="buttonjs/uiProgressButton.js"></script>
+		<script>
+			[].slice.call( document.querySelectorAll( '.progress-button' ) ).forEach( function( bttn, pos ) {
+				new UIProgressButton( bttn, {
+					callback : function( instance ) {
+						var progress = 0,
+							interval = setInterval( function() {
+								progress = Math.min( progress + Math.random() * 99, 1 );
+								instance.setProgress( progress );
+
+								if( progress === 1 ) {
+									instance.stop( pos === 1 || pos === 3 ? -1 : 1 );
+									clearInterval( interval );
+								}
+							}, 150 );
+					}
+				} );
+			} );
+		</script>
+<script src="formjs/nlform.js"></script>
+		<script>
+			var nlform = new NLForm( document.getElementById( 'nl-form' ) );
+		</script>
 </body>
 </html>
