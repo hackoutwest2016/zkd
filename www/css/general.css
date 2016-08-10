@@ -11,6 +11,8 @@
 	box-shadow: none;
 	color: #efefef !important;
 	text-shadow: 2px 2px #222;
+
+	border-bottom: 2px solid black;
 }
 
 .navbar-brand {
@@ -30,7 +32,7 @@
 	margin: 0px;
 	color: #efefef;
 	text-shadow: 2px 2px #222;
-	text-align: center !IMPORTANT;
+	text-align: center !important;
 }
 
 
@@ -48,8 +50,8 @@
 	color: #efefef;
 	text-shadow: 2px 2px #222;
 	font-size: 22pt;
-	margin-top: 0px;
-	margin-bottom: 20px;
+	margin-top: -10px;
+	margin-bottom: 25px;
 }
 #css-override .lyrics {
 	color: #efefef;
