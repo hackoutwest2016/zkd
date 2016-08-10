@@ -161,10 +161,10 @@ var app = {
         }
         
 
-        var thatthis = this;
-        setTimeout(function(){
-            app.playPreSong($("#zara"));
-        }, 1000);
+        // var thatthis = this;
+        // setTimeout(function(){
+        //     app.playPreSong($("#zara"));
+        // }, 1000);
     }, 
 
 
