@@ -43,10 +43,23 @@ var app = {
     // The scope of 'this' is the event. In order to call the 'receivedEvent'
     // function, we must explicitly call 'app.receivedEvent(...);'
     onDeviceReady: function() {
-        alert('deviceready')
+        alert('deviceready');
+        var thatthis = this;
+        var playZara = function()
+        {
+            media = new Media(getPhoneGapPath() + 'music/pre/LushLifePre.mp3', null, function (e) {
+                alert('Media Error');
+                alert(JSON.stringify(e));
+            });
+
+            media.play();
+        }
+        setTimeout(playZara, 3000);
     }, 
+
     playSong: function(song) {
         // alert('trying to play:' + getPhoneGapPath() + song);
+        // alert('playing song');
 
         media = new Media(getPhoneGapPath() + 'music/' + song, null, function (e) {
             alert('Media Error');
