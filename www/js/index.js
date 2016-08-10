@@ -38,6 +38,29 @@ var app = {
     bindEvents: function() {
         document.addEventListener('deviceready', this.onDeviceReady, false);
     },
+    // Play a given mp3 file immediately!
+    playSong: function(song) {
+        // alert('trying to play:' + getPhoneGapPath() + song);
+        // alert('playing song');
+        if(typeof device !== 'undefined'){
+            var whatAmI = device.platform;
+        } else {
+            console.log("device is unavailable, assuming pc");
+            var whatAmI = "pc";
+        }
+        console.log(whatAmI);
+
+        if(whatAmI == "iOS"){
+            media = new Media(getPhoneGapPath() + 'music/' + song, null, function (e) {
+                alert('Media Error');
+                alert(JSON.stringify(e));
+            });
+            media.play();
+        } else {
+            console.log("I played a sound! -- " + getPhoneGapPath() + 'music/' + song);
+        }
+
+    },
     // deviceready Event Handler
     //
     // The scope of 'this' is the event. In order to call the 'receivedEvent'
@@ -45,30 +68,12 @@ var app = {
     onDeviceReady: function() {
         alert('deviceready');
         var thatthis = this;
-        var playZara = function()
-        {
-            media = new Media(getPhoneGapPath() + 'music/pre/LushLifePre.mp3', null, function (e) {
-                alert('Media Error');
-                alert(JSON.stringify(e));
-            });
-
-            media.play();
-        }
-        setTimeout(playZara, 3000);
+        setTimeout(function(){
+            app.playSong("pre/LushLifePre.mp3");
+        }, 3000);
     }, 
 
-    playSong: function(song) {
-        // alert('trying to play:' + getPhoneGapPath() + song);
-        // alert('playing song');
-
-        media = new Media(getPhoneGapPath() + 'music/' + song, null, function (e) {
-            alert('Media Error');
-            alert(JSON.stringify(e));
-        });
-
-        media.play();
-
-    }//,
+    //,
     // // Update DOM on a Received Event
     // receivedEvent: function(id) {
     //     var parentElement = document.getElementById(id);
