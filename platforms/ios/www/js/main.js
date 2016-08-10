@@ -275,14 +275,6 @@ jQuery(document).ready(function($){
 		return mq;
 	}
 
-	setTimeout(doSomething, 7000);
 
-function doSomething() {
-	element = document.getElementById('boody');
-   var hammertime = new Hammer(element);
-hammertime.on('panleft', function(ev) {
-	console.log(ev);
-});
-}
 });
 
