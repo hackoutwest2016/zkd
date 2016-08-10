@@ -32,27 +32,28 @@
 			<li id="slide-2">
 				<ol class="sub-slides">
 					<li>
-						<div class="cd-slider-content">
+						<div class="cd-slider-content" id="zara" song="LushLife">
 							<div class="content-wrapper artist1">
 								<h2>Lush Life</h2>
 								<h3>Zara Larsson</h3>
 
-								<div class="lyrics" id="zara" song="LushLife">
-									<div time="500">But that thing went bust</div>
-									<div time="700">So I gave it up</div>
-									<div time="800">No tricks no bluff</div>
-									<div time="3000">I’m just better off</div> 
-									<div> without them <span class="boxcover" id="box1">-----</span>.</div>
+								<div class="lyrics">
+									<div time="1000">But that thing went bust</div>
+									<div time="2465">So I gave it up</div>
+									<div time="5892">No tricks no bluff</div>
+									<div time="7420">I’m just better off</div> 
+									<div time="8526"> without them <span class="boxcover" id="box1">-----</span>.</div>
 								</div>
 
-								<span class="input input--hoshi">
+								<span class="input input--hoshi" style="visibility: hidden">
 									<input class="jevlainput input__field input__field--hoshi" type="text" id="input-4" />
 									<label class="input__label" for="input-4" style="border-bottom: 2px solid black; width: 100%; "></label>
 								</span><br/>
 
-								<div class="progress-button">
-									<button id="button1" onclick="fadeBox(1);app.playSong('post/LushLifePost.mp3');$(this).parents('.cd-slider-content').trigger('swipeleft'); app.playSong('pre/PandaPre.mp3');
-									"><span>Next</span></button>
+
+								<div class="progress-button" style="visibility: hidden">
+									<button onclick="app.playSong('post/LushLifePost.mp3'); $(this).parents('.cd-slider-content').trigger('swipeleft'); app.playSong('pre/PandaPre.mp3');"><span>Next</span></button>
+									
 									<svg class="progress-circle" width="70" height="70"><path d="m35,2.5c17.955803,0 32.5,14.544199 32.5,32.5c0,17.955803 -14.544197,32.5 -32.5,32.5c-17.955803,0 -32.5,-14.544197 -32.5,-32.5c0,-17.955801 14.544197,-32.5 32.5,-32.5z"/></svg>
 									<svg class="checkmark" width="70" height="70"><path d="m31.5,46.5l15.3,-23.2"/><path d="m31.5,46.5l-8.5,-7.1"/></svg>
 									<svg class="cross" width="70" height="70"><path d="m35,35l-9.3,-9.3"/><path d="m35,35l9.3,9.3"/><path d="m35,35l-9.3,9.3"/><path d="m35,35l9.3,-9.3"/></svg>
@@ -69,9 +70,9 @@
 								<h3>Desiigner</h3>
 
 								<div class="lyrics">
-									<div time="200">Panda, panda, panda,</div>
-									<div time="500">panda, panda, <span class="boxcover" id="box2">-----</span>,</div>
-									<div time="600">panda, panda, panda.</div>
+									<div time="3457">Panda, panda, panda,</div>
+									<div time="7633">panda, panda, <span class="boxcover" id="box2">-----</span>,</div>
+									<div time="8871">panda, panda, panda.</div>
 								</div>
 
 
@@ -98,9 +99,9 @@
 								<h3>Coldplay</h3>
 
 								<div class="lyrics">
-									<div>When I was a river dried up</div>
-									<div>You came to rain a flood</div>
-									<div>So <span class="boxcover" id="box3">-----</span>.</div>
+									<div time="210">When I was a river dried up</div>
+									<div time="5538">You came to rain a flood</div>
+									<div time="10672">So <span class="boxcover" id="box3">-----</span>.</div>
 								</div>
 								
 
@@ -158,24 +159,5 @@
 		var nlform = new NLForm( document.getElementById( 'nl-form' ) );
 	</script>
 	<script src="js/hammer.min.js"></script>
-	<script>function fadeBox(x) {
-	console.log("HEHE");
-	//$("#box1").animate({backgroundColor: "Transparent"},300); 
-
-	 if (x == 1)
-	 	{
-	 		$('#box1').toggleClass('fadedBox');
-
-	 	};
-	 if (x == 2)
-	 	{
-	 		$('#box2').toggleClass('fadedBox');
-	 	};
-	 	if (x == 3)
-	 	{
-	 		$('#box3').toggleClass('fadedBox');
-	 	};
-	/*$(this).parents('.cd-slider-content').trigger('swipeleft'); app.playSong('pre/PandaPre.mp3'); */
-}</script>
 </body>
 </html>

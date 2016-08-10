@@ -45,6 +45,7 @@
 	text-shadow: 2px 2px #222;
 	font-size: 22pt;
 	margin-top: 0px;
+	margin-bottom: 20px;
 }
 #css-override .lyrics {
 	color: #efefef;
@@ -53,16 +54,19 @@
 	margin: 0px 5px;
 }
 #css-override .artist1 {
+	background-color: #111;
     background-image: url("../cvrart/LushLifeBG.png");
     background-size: cover;
     background-position: center; 
 }
 #css-override .artist2 {
+	background-color: #111;
     background-image: url("../cvrart/PandaBG.png");
     background-size: cover;
     background-position: center; 
 }
 #css-override .artist3 {
+	background-color: #111;
     background-image: url("../cvrart/ColdplayBG.png");
     background-size: cover;
     background-position: center; 
