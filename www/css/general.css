@@ -77,3 +77,9 @@
     background-size: cover;
     background-position: center; 
 }
+#css-override .finale {
+	background-color: #111;
+    background-image: url("../cvrart/LastPage.png");
+    background-size: cover;
+    background-position: center; 
+}
