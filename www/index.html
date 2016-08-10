@@ -11,6 +11,7 @@
 
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 	<script src="js/modernizr.js"></script> <!-- Modernizr -->
+	<script   src="https://code.jquery.com/jquery-3.1.0.min.js"   integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s="   crossorigin="anonymous"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
 	<link rel="stylesheet" type="text/css" href="css/buttondemo.css" />
@@ -40,7 +41,7 @@
 									So I gave it up<br />
 									No tricks no bluff<br />
 									I’m just better off without them<br />
-									<span class="boxcover">-----</span>.
+									<span class="boxcover" id="box1">-----</span>.
 								</p>
 
 								<span class="input input--hoshi">
@@ -49,7 +50,10 @@
 								</span><br/>
 
 								<div class="progress-button">
-									<button onclick="app.playSong('post/LushLifePost.mp3'); $(this).parents('.cd-slider-content').trigger('swipeleft'); app.playSong('pre/PandaPre.mp3');"><span>Next</span></button>
+									<button onclick="app.playSong('post/LushLifePost.mp3');
+									fadeBox(1); 
+									
+									"><span>Next</span></button>
 									<svg class="progress-circle" width="70" height="70"><path d="m35,2.5c17.955803,0 32.5,14.544199 32.5,32.5c0,17.955803 -14.544197,32.5 -32.5,32.5c-17.955803,0 -32.5,-14.544197 -32.5,-32.5c0,-17.955801 14.544197,-32.5 32.5,-32.5z"/></svg>
 									<svg class="checkmark" width="70" height="70"><path d="m31.5,46.5l15.3,-23.2"/><path d="m31.5,46.5l-8.5,-7.1"/></svg>
 									<svg class="cross" width="70" height="70"><path d="m35,35l-9.3,-9.3"/><path d="m35,35l9.3,9.3"/><path d="m35,35l-9.3,9.3"/><path d="m35,35l9.3,-9.3"/></svg>
@@ -66,7 +70,7 @@
 									<h3>Desiigner</h3>
 									<p class="lyrics">
 										Panda, panda, panda, panda, panda,<br/>
-										<span class="boxcover">-----</span>
+										<span class="boxcover" id="box2">-----</span>
 										panda, panda, panda.
 									</p>
 								</div>
@@ -78,7 +82,7 @@
 								</span><br/>
 
 								<div class="progress-button">
-									<button><span>Next</span></button>
+									<button onClick="fadeBox(2);"><span>Next</span></button>
 									<svg class="progress-circle" width="70" height="70"><path d="m35,2.5c17.955803,0 32.5,14.544199 32.5,32.5c0,17.955803 -14.544197,32.5 -32.5,32.5c-17.955803,0 -32.5,-14.544197 -32.5,-32.5c0,-17.955801 14.544197,-32.5 32.5,-32.5z"/></svg>
 									<svg class="checkmark" width="70" height="70"><path d="m31.5,46.5l15.3,-23.2"/><path d="m31.5,46.5l-8.5,-7.1"/></svg>
 									<svg class="cross" width="70" height="70"><path d="m35,35l-9.3,-9.3"/><path d="m35,35l9.3,9.3"/><path d="m35,35l-9.3,9.3"/><path d="m35,35l9.3,-9.3"/></svg>
@@ -96,7 +100,7 @@
 									<p class="lyrics">
 										When I was a river dried up<br/>
 										You came to rain a flood <br/>
-										So <span class="boxcover">-----</span>.
+										So <span class="boxcover" id="box3">-----</span>.
 									</p>
 								</div>
 
@@ -107,7 +111,7 @@
 								</span><br/>
 
 								<div class="progress-button">
-									<button><span>Next</span></button>
+									<button onClick="fadeBox(3);"><span>Next</span></button>
 									<svg class="progress-circle" width="70" height="70"><path d="m35,2.5c17.955803,0 32.5,14.544199 32.5,32.5c0,17.955803 -14.544197,32.5 -32.5,32.5c-17.955803,0 -32.5,-14.544197 -32.5,-32.5c0,-17.955801 14.544197,-32.5 32.5,-32.5z"/></svg>
 									<svg class="checkmark" width="70" height="70"><path d="m31.5,46.5l15.3,-23.2"/><path d="m31.5,46.5l-8.5,-7.1"/></svg>
 									<svg class="cross" width="70" height="70"><path d="m35,35l-9.3,-9.3"/><path d="m35,35l9.3,9.3"/><path d="m35,35l-9.3,9.3"/><path d="m35,35l9.3,-9.3"/></svg>

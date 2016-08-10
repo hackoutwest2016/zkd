@@ -1104,7 +1104,7 @@
 
 .boxcover{
 padding: 0em 0.4em 0em 0.4em;
-	background-color:black !important;
+	background-color:black;
 
 }
 @font-face {
