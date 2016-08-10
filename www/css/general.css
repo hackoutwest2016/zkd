@@ -4,7 +4,6 @@
 	background-color: black;
 }
 
-
 .navbar-brand {
     position: absolute;
     width: 100%;
@@ -29,20 +28,24 @@
 }
 .jevlainput:focus {
   outline: none;
-
-
-.lyrics {
-	color: #222;
-	font-size: 22pt;
 }
+
+
 .cd-slideshow {
 	margin: 0px !important;
 }
 
-h2 {
+#css-override h2 {
 	color: #444;
+	font-size: 30pt;
+	font-weight: bold;
 }
-h3 {
+#css-override h3 {
 	color: #444;
-
+	font-size: 22pt;
+	margin-top: 0px;
+}
+.lyrics {
+	color: #222;
+	font-size: 22pt;
 }
