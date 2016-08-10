@@ -96,7 +96,11 @@ var app = {
         page = $(page).parents(".cd-slider-content");
 
         $(page).find(".boxcover").toggleClass("fadedBox");
-
+        var theButton = $(page).find(".progress-button");
+        $(page).find(".progress-button").delay(1500).fadeTo(500, 0, function(){
+           theButton.css("visibility", "hidden");   
+        });
+        
         song = $(page).attr('song') + "Post.mp3";
 
         if(typeof device !== 'undefined'){
