@@ -1,10 +1,12 @@
-.boxcover{
+#css-override .boxcover{
+	padding: none !important;
 	color: black !important;
 	background-color: black;
 	box-shadow: 0px 0px 10px 3px #efefef;
 	text-shadow: none;
 }
 #css-override .fadedBox{
+	padding: none !important;
 	background-color: transparent;
 	box-shadow: none;
 	color: #efefef !important;

@@ -1104,11 +1104,6 @@
 	transform: translate3d(0, -50%, 0);
 }
 
-.boxcover{
-padding: 0em 0.4em 0em 0.4em;
-	background-color:black;
-
-}
 @font-face {
 	font-family: 'nlicons';
 	src:url('../fonts/nlicons/nlicons.eot');
