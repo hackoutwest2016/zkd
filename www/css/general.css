@@ -19,8 +19,10 @@
 }
 
 .jevlainput{
-	font-size:22px !important; color: black;
+	font-size:22px !important;
 	margin: 0px;
+	color: #efefef;
+	text-shadow: 2px 2px #222;
 }
 
 
