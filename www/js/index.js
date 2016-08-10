@@ -52,25 +52,97 @@ var app = {
             var whatAmI = "pc";
         }
         console.log(whatAmI);
-
+        var duration = 1000;
         if(whatAmI == "iOS"){
+
+            function status_change(code) {
+                switch (code) {
+                    case Media.MEDIA_STOPPED : 
+                        //alert("finished playing?");
+                        $(page).find(".input--hoshi").css('visibility', 'visible');
+                        $(page).find(".progress-button").css('visibility', 'visible'); 
+                        break;
+                }
+            }
+
             media = new Media(getPhoneGapPath() + 'music/' + song, null, function (e) {
                 alert('Media Error');
                 alert(JSON.stringify(e));
-            });
+            }, status_change);
+
             media.play();
-            alert("finished playing?");
+            
         } else {
             console.log("I played a sound! -- " + getPhoneGapPath() + 'music/' + song);
+            setTimeout(function(){
+                $(page).find(".input--hoshi").css('visibility', 'visible');
+                $(page).find(".progress-button").css('visibility', 'visible'); 
+            }, duration);
         }
 
-
-        $(page).children().each(function(){
+        $(page).find(".lyrics").children().each(function(){
             //alert($(this).html());
             var elem = $(this);
             timeToBold = elem.attr("time");
             setTimeout(function(){ elem.css("font-weight","Bold"); }, timeToBold);
         });
+
+    },
+
+    playPostSong: function(page) {
+        // alert('trying to play:' + getPhoneGapPath() + song);
+        // alert('playing song');
+
+        page = $(page).parents(".cd-slider-content");
+
+        $(page).find(".boxcover").toggleClass("fadedBox");
+
+        song = $(page).attr('song') + "Post.mp3";
+
+        if(typeof device !== 'undefined'){
+            var whatAmI = device.platform;
+        } else {
+            console.log("device is unavailable, assuming pc");
+            var whatAmI = "pc";
+        }
+        console.log(whatAmI);
+        var duration = 1000;
+        if(whatAmI == "iOS"){
+
+            function status_change(code) {
+                switch (code) {
+                    case Media.MEDIA_STOPPED : 
+                        //alert("finished playing?");
+                        //alert("finsihe dplaying post song");
+                        setTimeout(function(){
+                            $(page).trigger('swipeleft');   
+                        }, 2500);
+                        setTimeout(function(){
+                            app.playPreSong($(page).parent().next().children(".cd-slider-content"));
+                        }, 3000);
+                        break;
+                }
+            }
+
+            media = new Media(getPhoneGapPath() + 'music/' + song, null, function (e) {
+                alert('Media Error');
+                alert(JSON.stringify(e));
+            }, status_change);
+
+            media.play();
+            
+        } else {
+            console.log("I played a sound! -- " + getPhoneGapPath() + 'music/' + song);
+            //alert("finsihe dplaying post song");
+            setTimeout(function(){
+                $(page).trigger('swipeleft');
+            }, 1000);
+            console.log($(page).parent().next().children(".cd-slider-content"));
+            setTimeout(function(){
+                app.playPreSong($(page).parent().next().children(".cd-slider-content"));
+            }, 2000);
+        }
+
 
     },
     // deviceready Event Handler
