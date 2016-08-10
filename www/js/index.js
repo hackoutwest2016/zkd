@@ -39,9 +39,12 @@ var app = {
         document.addEventListener('deviceready', this.onDeviceReady, false);
     },
     // Play a given mp3 file immediately!
-    playSong: function(song) {
+    playPreSong: function(page) {
         // alert('trying to play:' + getPhoneGapPath() + song);
         // alert('playing song');
+
+        song = $(page).attr('song') + "Pre.mp3";
+
         if(typeof device !== 'undefined'){
             var whatAmI = device.platform;
         } else {
@@ -56,9 +59,18 @@ var app = {
                 alert(JSON.stringify(e));
             });
             media.play();
+            alert("finished playing?");
         } else {
             console.log("I played a sound! -- " + getPhoneGapPath() + 'music/' + song);
         }
+
+
+        $(page).children().each(function(){
+            //alert($(this).html());
+            var elem = $(this);
+            timeToBold = elem.attr("time");
+            setTimeout(function(){ elem.css("font-weight","Bold"); }, timeToBold);
+        });
 
     },
     // deviceready Event Handler
@@ -66,12 +78,14 @@ var app = {
     // The scope of 'this' is the event. In order to call the 'receivedEvent'
     // function, we must explicitly call 'app.receivedEvent(...);'
     onDeviceReady: function() {
-        alert('deviceready');
+        console.log('deviceready');
         var thatthis = this;
         setTimeout(function(){
-            app.playSong("pre/LushLifePre.mp3");
-        }, 3000);
+            app.playPreSong($("#zara"));
+        }, 1000);
     }, 
+
+
 
     //,
     // // Update DOM on a Received Event
@@ -86,3 +100,44 @@ var app = {
     //     console.log('Received Event: ' + id);
     // }
 };
+
+$(document).ready(function() {
+
+    // $(".lyrics").each(function(){
+    //     //alert($(this).html());
+    //     $(this).children().each(function(){
+    //         //alert($(this).html());
+    //         var elem = $(this);
+    //         timeToBold = elem.attr("time");
+    //         setTimeout(function(){ elem.css("font-weight","Bold"); }, timeToBold);
+    //     });
+    //     //alert(songtext);
+    // });
+
+    // songtext = [ // [text, duration]
+    //     ["This", 500],
+    //     ["is", 200],
+    //     ["a", 200],
+    //     ["very", 500],
+    //     ["good", 500],
+    //     ["songtext!", 1000]
+    // ];
+    // var text="";
+    // $.each(songtext, function(a, b) {
+    //     text += "<span id='p"+a+"' style='color:blue'>" + b[0] + "</span> ";
+    // });
+    
+    // $('#div').html(text);
+    
+    // cc=0;
+    
+    // nextWord();
+});
+
+var cc = 0;
+function nextWord() {
+    $('#p'+cc).css("color", "red");
+    cc++;
+    if(cc> songtext.length-1) return;
+    window.setTimeout(nextWord, songtext[cc-1][1]);
+}
