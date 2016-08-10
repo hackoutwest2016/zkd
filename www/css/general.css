@@ -1,7 +1,9 @@
 .boxcover {
 	padding: 0em 0.4em 0em 0.4em;
 	color: black !important;
-	background-color: black;
+	background-color: white;
+	box-shadow: 0px 0px 10px 3px #efefef;
+	text-shadow: none;
 }
 
 .navbar-brand {
@@ -27,17 +29,35 @@
 }
 
 #css-override h2 {
-	color: #444;
+	color: #efefef;
+	text-shadow: 2px 2px #222;
 	font-size: 30pt;
 	font-weight: bold;
 }
 #css-override h3 {
-	color: #444;
+	color: #efefef;
+	text-shadow: 2px 2px #222;
 	font-size: 22pt;
 	margin-top: 0px;
 }
 #css-override .lyrics {
-	color: #222;
+	color: #efefef;
+	text-shadow: 2px 2px #222;
 	font-size: 18pt;
 	margin: 0px 5px;
+}
+#css-override .artist1 {
+    background-image: url("../cvrart/LushLifeBG.png");
+    background-size: cover;
+    background-position: center; 
+}
+#css-override .artist2 {
+    background-image: url("../cvrart/PandaBG.png");
+    background-size: cover;
+    background-position: center; 
+}
+#css-override .artist3 {
+    background-image: url("../cvrart/ColdplayBG.png");
+    background-size: cover;
+    background-position: center; 
 }
