@@ -17,17 +17,8 @@
 }
 
 .jevlainput{
-  display: block;
-  margin: 0;
-  width: 100%;
-  font-family: sans-serif;
-  font-size: 18px;
-  appearance: none;
-  box-shadow: none;
-  border-radius: none;
-}
-.jevlainput:focus {
-  outline: none;
+	font-size:22px !important; color: black;
+	margin: 0px;
 }
 
 
@@ -45,8 +36,8 @@
 	font-size: 22pt;
 	margin-top: 0px;
 }
-.lyrics {
+#css-override .lyrics {
 	color: #222;
-	font-size: 22pt;
-	line-height: 30pt;
+	font-size: 18pt;
+	margin: 0px 5px;
 }
