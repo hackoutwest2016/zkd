@@ -115,119 +115,36 @@
 		</ol> <!-- .cd-slideshow -->
 	</div> <!-- .cd-slideshow-wrapper -->
 	
-<script src="js/jquery-2.1.4.js"></script>
-<script src="js/jquery.mobile.custom.min.js"></script>
-<script src="js/main.js"></script> <!-- Resource jQuery -->
-<script src="js/buttonclassie.js"></script>
-<script type="text/javascript" src="cordova.js"></script>
-<script type="text/javascript" src="js/index.js"></script>
-<script type="text/javascript">
-app.initialize();
-</script>
-		<script src="js/buttonuiProgressButton.js"></script>
-		<script>
-			[].slice.call( document.querySelectorAll( '.progress-button' ) ).forEach( function( bttn, pos ) {
-				new UIProgressButton( bttn, {
-					callback : function( instance ) {
-						var progress = 0,
-							interval = setInterval( function() {
-								progress = Math.min( progress + Math.random() * 99, 1 );
-								instance.setProgress( progress );
+	<script src="js/jquery-2.1.4.js"></script>
+	<script src="js/jquery.mobile.custom.min.js"></script>
+	<script src="js/main.js"></script> <!-- Resource jQuery -->
+	<script src="js/buttonclassie.js"></script>
+	<script type="text/javascript" src="cordova.js"></script>
+	<script type="text/javascript" src="js/index.js"></script>
+	<script type="text/javascript"> app.initialize(); </script>
+	<script src="js/buttonuiProgressButton.js"></script>
+	<script>
+		[].slice.call( document.querySelectorAll( '.progress-button' ) ).forEach( function( bttn, pos ) {
+			new UIProgressButton( bttn, {
+				callback : function( instance ) {
+					var progress = 0,
+						interval = setInterval( function() {
+							progress = Math.min( progress + Math.random() * 99, 1 );
+							instance.setProgress( progress );
 
-								if( progress === 1 ) {
-									instance.stop( pos === 1 || pos === 3 ? -1 : 1 );
-									clearInterval( interval );
-								}
-							}, 150 );
-					}
-				} );
+							if( progress === 1 ) {
+								instance.stop( pos === 1 || pos === 3 ? -1 : 1 );
+								clearInterval( interval );
+							}
+						}, 150 );
+				}
 			} );
-		</script>
-<script src="js/nlform.js"></script>
-		<script>
-			var nlform = new NLForm( document.getElementById( 'nl-form' ) );
-		</script>
-		<script>/*!
- * classie - class helper functions
- * from bonzo https://github.com/ded/bonzo
- * 
- * classie.has( elem, 'my-class' ) -> true/false
- * classie.add( elem, 'my-new-class' )
- * classie.remove( elem, 'my-unwanted-class' )
- * classie.toggle( elem, 'my-class' )
- */
-
-/*jshint browser: true, strict: true, undef: true */
-/*global define: false */
-
-( function( window ) {
-
-'use strict';
-
-// class helper functions from bonzo https://github.com/ded/bonzo
-
-function classReg( className ) {
-  return new RegExp("(^|\\s+)" + className + "(\\s+|$)");
-}
-
-// classList support for class management
-// altho to be fair, the api sucks because it won't accept multiple classes at once
-var hasClass, addClass, removeClass;
-
-if ( 'classList' in document.documentElement ) {
-  hasClass = function( elem, c ) {
-    return elem.classList.contains( c );
-  };
-  addClass = function( elem, c ) {
-    elem.classList.add( c );
-  };
-  removeClass = function( elem, c ) {
-    elem.classList.remove( c );
-  };
-}
-else {
-  hasClass = function( elem, c ) {
-    return classReg( c ).test( elem.className );
-  };
-  addClass = function( elem, c ) {
-    if ( !hasClass( elem, c ) ) {
-      elem.className = elem.className + ' ' + c;
-    }
-  };
-  removeClass = function( elem, c ) {
-    elem.className = elem.className.replace( classReg( c ), ' ' );
-  };
-}
-
-function toggleClass( elem, c ) {
-  var fn = hasClass( elem, c ) ? removeClass : addClass;
-  fn( elem, c );
-}
-
-var classie = {
-  // full names
-  hasClass: hasClass,
-  addClass: addClass,
-  removeClass: removeClass,
-  toggleClass: toggleClass,
-  // short names
-  has: hasClass,
-  add: addClass,
-  remove: removeClass,
-  toggle: toggleClass
-};
-
-// transport
-if ( typeof define === 'function' && define.amd ) {
-  // AMD
-  define( classie );
-} else {
-  // browser global
-  window.classie = classie;
-}
-
-})( window );
-</script>
-<script src="js/hammer.min.js"></script>
+		} );
+	</script>
+	<script src="js/nlform.js"></script>
+	<script>
+		var nlform = new NLForm( document.getElementById( 'nl-form' ) );
+	</script>
+	<script src="js/hammer.min.js"></script>
 </body>
 </html>
