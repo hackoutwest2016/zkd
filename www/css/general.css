@@ -29,7 +29,7 @@
 }
 .jevlainput:focus {
   outline: none;
-
+}
 
 .lyrics {
 	color: #222;
@@ -39,10 +39,10 @@
 	margin: 0px !important;
 }
 
-h2 {
+#css-override h2 {
 	color: #444;
 }
-h3 {
+#css-override h3 {
 	color: #444;
 
 }
