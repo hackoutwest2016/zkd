@@ -151,6 +151,12 @@ var app = {
     // function, we must explicitly call 'app.receivedEvent(...);'
     onDeviceReady: function() {
         console.log('deviceready');
+
+        if(typeof device !== 'undefined'){
+            StatusBar.hide();
+        }
+        
+
         var thatthis = this;
         setTimeout(function(){
             app.playPreSong($("#zara"));
