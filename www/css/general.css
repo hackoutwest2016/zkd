@@ -1,4 +1,4 @@
-#box1, #box2, #box3{
+.boxcover {
 	padding: 0em 0.4em 0em 0.4em;
 	color: black !important;
 	background-color: black;
@@ -7,6 +7,8 @@
 }
 .fadedBox{
 	background-color: transparent !important;
+	box-shadow: none;
+	color: white !important;
 }
 
 .navbar-brand {
