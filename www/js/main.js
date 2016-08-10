@@ -281,10 +281,11 @@ jQuery(document).ready(function($){
 function fadeBox(x) {
 	console.log("HEHE");
 	//$("#box1").animate({backgroundColor: "Transparent"},300); 
-	
+
 	 if (x == 1)
 	 	{
 	 		$('#box1').toggleClass('fadedBox');
+
 	 	};
 	 if (x == 2)
 	 	{
@@ -296,8 +297,6 @@ function fadeBox(x) {
 	 	};
 	/*$(this).parents('.cd-slider-content').trigger('swipeleft'); app.playSong('pre/PandaPre.mp3'); */
 }
-/*$("#yourDiv").click(function() {
-    $(this).toggleClass('clicked');
-});*/
+
 
 
