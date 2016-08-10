@@ -66,8 +66,8 @@ var app = {
             }
 
             media = new Media(getPhoneGapPath() + 'music/' + song, null, function (e) {
-                alert('Media Error');
-                alert(JSON.stringify(e));
+                //alert('Media Error');
+                //alert(JSON.stringify(e));
             }, status_change);
 
             media.play();
@@ -129,8 +129,8 @@ var app = {
             }
 
             media = new Media(getPhoneGapPath() + 'music/' + song, null, function (e) {
-                alert('Media Error');
-                alert(JSON.stringify(e));
+                //alert('Media Error');
+                //alert(JSON.stringify(e));
             }, status_change);
 
             media.play();
