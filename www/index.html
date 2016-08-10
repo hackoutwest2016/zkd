@@ -32,12 +32,12 @@
 			<li id="slide-2">
 				<ol class="sub-slides">
 					<li>
-						<div class="cd-slider-content">
+						<div class="cd-slider-content" id="zara" song="LushLife">
 							<div class="content-wrapper artist1">
 								<h2>Lush Life</h2>
 								<h3>Zara Larsson</h3>
 
-								<div class="lyrics" id="zara" song="LushLife">
+								<div class="lyrics">
 									<div time="500">But that thing went bust</div>
 									<div time="700">So I gave it up</div>
 									<div time="800">No tricks no bluff</div>
@@ -45,14 +45,15 @@
 									<div> without them <span class="boxcover" id="box1">-----</span>.</div>
 								</div>
 
-								<span class="input input--hoshi">
+								<span class="input input--hoshi" style="visibility: hidden">
 									<input class="jevlainput input__field input__field--hoshi" type="text" id="input-4" />
 									<label class="input__label" for="input-4" style="border-bottom: 2px solid black; width: 100%; "></label>
 								</span><br/>
 
-								<div class="progress-button">
-									<button id="button1" onclick="fadeBox(1);app.playSong('post/LushLifePost.mp3');$(this).parents('.cd-slider-content').trigger('swipeleft'); app.playSong('pre/PandaPre.mp3');
-									"><span>Next</span></button>
+
+								<div class="progress-button" style="visibility: hidden">
+									<button onclick="app.playSong('post/LushLifePost.mp3'); $(this).parents('.cd-slider-content').trigger('swipeleft'); app.playSong('pre/PandaPre.mp3');"><span>Next</span></button>
+									
 									<svg class="progress-circle" width="70" height="70"><path d="m35,2.5c17.955803,0 32.5,14.544199 32.5,32.5c0,17.955803 -14.544197,32.5 -32.5,32.5c-17.955803,0 -32.5,-14.544197 -32.5,-32.5c0,-17.955801 14.544197,-32.5 32.5,-32.5z"/></svg>
 									<svg class="checkmark" width="70" height="70"><path d="m31.5,46.5l15.3,-23.2"/><path d="m31.5,46.5l-8.5,-7.1"/></svg>
 									<svg class="cross" width="70" height="70"><path d="m35,35l-9.3,-9.3"/><path d="m35,35l9.3,9.3"/><path d="m35,35l-9.3,9.3"/><path d="m35,35l9.3,-9.3"/></svg>
@@ -158,24 +159,5 @@
 		var nlform = new NLForm( document.getElementById( 'nl-form' ) );
 	</script>
 	<script src="js/hammer.min.js"></script>
-	<script>function fadeBox(x) {
-	console.log("HEHE");
-	//$("#box1").animate({backgroundColor: "Transparent"},300); 
-
-	 if (x == 1)
-	 	{
-	 		$('#box1').toggleClass('fadedBox');
-
-	 	};
-	 if (x == 2)
-	 	{
-	 		$('#box2').toggleClass('fadedBox');
-	 	};
-	 	if (x == 3)
-	 	{
-	 		$('#box3').toggleClass('fadedBox');
-	 	};
-	/*$(this).parents('.cd-slider-content').trigger('swipeleft'); app.playSong('pre/PandaPre.mp3'); */
-}</script>
 </body>
 </html>
